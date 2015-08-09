@@ -8,3 +8,12 @@ logging {
         category config   { bind-system; };category security { bind-system; };category update   { bind-system; };
         category default  { bind-system; };category queries  { bind-system; };category client   { bind-system; };
 };
+options {
+        directory "/var/cache/bind";
+        allow-query { localhost; 10.0.0.0/24; };
+        allow-transfer { localhost; 10.0.0.0/24; };
+        allow-recursion { localhost; 10.0.0.0/24; };
+        dnssec-validation auto;
+        auth-nxdomain no; # conform to RFC1035
+        listen-on-v6 { none; };
+};
