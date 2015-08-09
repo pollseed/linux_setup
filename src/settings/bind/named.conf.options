@@ -1,0 +1,10 @@
+logging {
+        channel bind-system {
+                file "/var/log/named/bind-system.log" versions 10 size 10m;
+                print-category yes;
+                print-time yes;
+        };
+        category xfer-in  { bind-system; };category xfer-out { bind-system; };category notify   { bind-system; };
+        category config   { bind-system; };category security { bind-system; };category update   { bind-system; };
+        category default  { bind-system; };category queries  { bind-system; };category client   { bind-system; };
+};
