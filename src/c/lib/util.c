@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int average(int *data, int size);
+void write(char *name, char *permission, char *body);
 
 int main(void)
 {
@@ -19,4 +20,15 @@ int average(int *data, int size)
     average += data[i];
   }
   return average / size;
+}
+
+void write(char *name, char *permission, char *body)
+{
+  if (name == NULL || permission == NULL || body == NULL) {
+    return;
+  }
+  FILE *file;
+  file = fopen(name, permission);
+  fprintf(file, body);
+  fclose(file);
 }
