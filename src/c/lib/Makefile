@@ -1,10 +1,10 @@
 PROGRAM = main
-OBJS = main.o
+OBJS = main.o util.o
 CC = gcc
 CFLAGS = -Wall -O2
 
-$(PROGRAM): $(OBJS) util.o
-        $(CC) -o $(PROGRAM) $(OBJS) util.o
+$(PROGRAM): $(OBJS)
+        $(CC) -o $(PROGRAM) $(OBJS)
 
 main.o: main.c
         $(CC) $(CFLAGS) -c $<
@@ -16,4 +16,4 @@ util.o: util.h
 
 .PHONY: clean
 clean:
-        $(RM) main $(OBJS) util.o
+        $(RM) main $(OBJS)
