@@ -17,7 +17,7 @@ CREATE TABLE `items` (
 
 -- 2.
 -- NON Tuning
-explain 
+EXPLAIN 
 SELECT *
 FROM item i 
 INNER JOIN pref p ON i.pref_code = p.pref_code 
@@ -44,7 +44,7 @@ FROM
 SELECT * FROM item WHERE pref_code <> 1;
 
 -- Tuning
-explain 
+EXPLAIN 
 SELECT *
 FROM item i 
 INNER JOIN pref p ON i.pref_code = p.pref_code
