@@ -1,3 +1,8 @@
+-- Add Schema
+CREATE SCHEMA `test_tuning` DEFAULT CHARACTER SET utf8 ;
+
+-- Set As Default Schema to test_tuning
+
 -- 1.
 -- item テーブル
 CREATE TABLE `item` (
@@ -28,7 +33,7 @@ ALTER TABLE `item`
 ADD INDEX `idx_item1` USING BTREE (`pref_code` ASC);
 
 -- Add FK
-ALTER TABLE `test`.`item` 
+ALTER TABLE `item` 
 ADD CONSTRAINT `fk_item1`
   FOREIGN KEY (`pref_code`)
   REFERENCES `test`.`pref` (`pref_code`)
