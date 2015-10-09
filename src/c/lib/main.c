@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    // test code
     ln("hello, world");
     int *p,i,value=10, ave, array[] = {1,4,2,4,4}, buf;
     const array_size = sizeof array/sizeof(int);
