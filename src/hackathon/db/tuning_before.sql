@@ -1,4 +1,7 @@
--- Q1 ハンズオン用テーブル
+-- ハンズオン用テーブル
+
+-- Q1 以下のテーブルに対して、NULLが発生しないように正規化をして下さい
+
 CREATE TABLE `item` (
    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
    `item_type_name` varchar(128) NOT NULL,
