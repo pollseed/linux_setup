@@ -10,3 +10,7 @@ CREATE TABLE `item` (
    `sold_date` datetime,
    PRIMARY KEY (`id`)
  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+-- Q2 データを投入後、全テーブルを結合し、`sold_date`を条件に含めて検索してそのパフォーマンスの悪さを説明して下さい
+
+-- Q3 Q2で作ったテーブルに対して、インデクスを貼り、パフォーマンスを改善して下さい
