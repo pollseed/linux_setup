@@ -142,3 +142,6 @@ INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('
 INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('2', '2', '1');
 INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('2', '3', '1');
 INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('2', '4', '1');
+
+-- メモ
+indexに固定させたいならば、正規化をしてNULLを省くことが大切
