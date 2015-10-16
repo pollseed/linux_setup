@@ -34,3 +34,11 @@ CREATE TABLE `item_sold` (
    PRIMARY KEY (`item_item_type_id`),
    CONSTRAINT `fk_item_sold1` FOREIGN KEY (`item_item_type_id`) REFERENCES `item_item_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+/*
+以下SQLに対してチューニングをしていく
+*/
+SELECT * FROM item i,item_type it,item_item_type iit,item_sold iss
+where i.id = iit.item_id and it.id = iit.item_type_id and iit.id = iss.item_item_type_id
+and iss.sold_date <= now();
