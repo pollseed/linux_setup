@@ -143,5 +143,9 @@ INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('
 INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('2', '3', '1');
 INSERT INTO `test`.`item` (`pref_code`, `items_code`, `classify_code`) VALUES ('2', '4', '1');
 
--- メモ
+/* メモ
 indexに固定させたいならば、正規化をしてNULLを省くことが大切
+→NOTNULL制約が入れられないようなテーブル構造はよくない
+⇔ただし、ログとか履歴テーブルはまた話は別。そもそもリレーション必要なければNULLがあってもよい。
+前提はリレーションにおいてはNULLを入れないでという話なのでね
+*/
